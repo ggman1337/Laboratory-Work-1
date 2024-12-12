@@ -74,9 +74,9 @@ jobs:
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
-
-    - name: Setup Packeges
-      run: dotnet workload list
+      
+    - name: Setup NUnit 
+      run: dotnet add package NUnit --version 4.2.2
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
