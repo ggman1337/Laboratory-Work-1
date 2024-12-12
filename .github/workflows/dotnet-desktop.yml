@@ -39,7 +39,7 @@ jobs:
       run: dotnet restore ${{ env.Solution_Name }}
 
     - name: Build the solution
-      run: msbuild ${{ env.Solution_Name }} --configuration ${{ matrix.configuration }} --runtime win-x64
+      run: msbuild ${{ env.Solution_Name }} /p:Configuration=${{ matrix.configuration }} /p:Platform=x64
 
     - name: Execute unit tests
-      run: dotnet test ${{ env.Test_Project_Path }} --configuration ${{ matrix.configuration }} --runtime win-x64
+      run: dotnet test ${{ env.Test_Project_Path }} /p:Configuration=${{ matrix.configuration }} /p:Platform=x64
