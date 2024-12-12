@@ -76,7 +76,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
       
     - name: Setup NUnit 
-      run: dotnet add package NUnit --version 4.2.2
+      run: dotnet add ConsoleApp1 package NUnit --version 4.2.2
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
